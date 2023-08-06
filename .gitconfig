@@ -1,0 +1,21 @@
+[core]
+	editor = "vim +startinsert"
+[alias]
+    ss = "status"
+	sh = "stash"
+	shp = "stash pop"
+    a = "add"
+    aa = "add -A"
+    b = "branch"
+    c = "commit"
+    cm = "commit -m"
+    ca = "commit --amend --no-edit"
+	co = "checkout"
+	m = !"git merge $1"
+    mnf = !"git merge $1 --no-ff"
+    cr = !"git push -u ${1:-origin} HEAD:`git config branch.$(git name-rev --name-only HEAD).merge | sed -e 's@refs/heads/@refs/for/@'`"
+    fa = "fetch --all"
+    l = "log --oneline"
+    ll = "log -1 HEAD --stat"
+[color]
+	ui = true
