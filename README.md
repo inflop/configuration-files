@@ -40,3 +40,14 @@ Requires installed:
 
 - [vim](https://www.vim.org/)
 
+After install run command `:PluginInstall` within vim to install all plugins defined in the [.vimrc](./.vimrc) file.
+
+## neovim
+
+- [.config/nvim](./.config/nvim)
+
+Requires installed:
+
+- [neovim](https://neovim.io/)
+
+After install run command `:PlugInstall` within neovim to install all plugins defined in the [init.vim](./.config/nvim/init.vim) file.
