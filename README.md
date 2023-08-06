@@ -1,7 +1,9 @@
 # My basic configuration files for Linux system
 
+Run the below command from your home directory:
+
 ```sh
-git clone --recurse-submodules https://github.com/inflop/config-stash.git
+git clone --recurse-submodules https://github.com/inflop/config-stash.git .
 ```
 
 ## git
