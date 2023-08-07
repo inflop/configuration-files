@@ -11,6 +11,7 @@ git clone --recurse-submodules https://github.com/inflop/config-stash.git .
 Files:
 
 - [.gitconfig](./.gitconfig)
+- [.git_hooks](./.git_hooks/)
 
 Requires installed:
 
