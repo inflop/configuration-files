@@ -1,5 +1,6 @@
 [core]
-	editor = "vim +startinsert"
+    editor = "vim +startinsert"
+    hooksPath = ~/.git_hooks
 [alias]
     ss = "status"
 	sh = "stash"
