@@ -10,7 +10,8 @@
     b = "branch"
     c = "commit"
     cm = "commit -m"
-    ca = "commit --amend --no-edit"
+    ca = "commit --amend"
+    can = "commit --amend --no-edit"
 	co = "checkout"
 	m = !"git merge $1"
     mnf = !"git merge $1 --no-ff"
@@ -18,5 +19,7 @@
     fa = "fetch --all"
     l = "log --oneline"
     ll = "log -1 HEAD --stat"
+    ps = "push"
+    pl = "pull"
 [color]
 	ui = true
