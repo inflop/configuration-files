@@ -4,6 +4,10 @@ COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
 SHA1=$3
 
+if [ "${COMMIT_SOURCE}" = merge ]; then
+    exit 0
+fi
+
 # This way you can customize which branches should be skipped when
 # prepending commit message.
 if [ -z "$BRANCHES_TO_SKIP" ]; then

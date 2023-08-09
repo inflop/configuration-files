@@ -3,8 +3,8 @@
     hooksPath = ~/.git_hooks
 [alias]
     ss = "status"
-	sh = "stash"
-	shp = "stash pop"
+    sh = "stash"
+    shp = "stash pop"
     a = "add"
     aa = "add -A"
     b = "branch"
@@ -12,8 +12,8 @@
     cm = "commit -m"
     ca = "commit --amend"
     can = "commit --amend --no-edit"
-	co = "checkout"
-	m = !"git merge $1"
+    co = "checkout"
+    m = !"git merge $1"
     mnf = !"git merge $1 --no-ff"
     cr = !"git push -u ${1:-origin} HEAD:`git config branch.$(git name-rev --name-only HEAD).merge | sed -e 's@refs/heads/@refs/for/@'`"
     fa = "fetch --all"
@@ -22,4 +22,4 @@
     ps = "push"
     pl = "pull"
 [color]
-	ui = true
+    ui = true
