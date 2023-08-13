@@ -5,6 +5,7 @@
     ss = "status"
     sh = "stash"
     shp = "stash pop"
+    shs = "stash save"
     a = "add"
     aa = "add -A"
     b = "branch"
