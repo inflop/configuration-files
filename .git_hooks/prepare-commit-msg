@@ -18,6 +18,12 @@ fi
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 BRANCH_NAME="${BRANCH_NAME##*/}"
 
+# Check if commit message already has correct branch name.
+COMMIT_MESSAGE_FIRST_WORD=`echo $(cut -d':' -f1 $1) | cut -d' ' -f1`
+if [ $COMMIT_MESSAGE_FIRST_WORD = $BRANCH_NAME ]; then
+    exit 0
+fi
+
 BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | grep -c "^$BRANCH_NAME$")
 BRANCH_IN_COMMIT=$(grep -c "\[$BRANCH_NAME\]" $1)
 
