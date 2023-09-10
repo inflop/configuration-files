@@ -20,7 +20,7 @@ BRANCH_NAME="${BRANCH_NAME##*/}"
 
 # Check if commit message already has correct branch name.
 COMMIT_MESSAGE_FIRST_WORD=`echo $(cut -d':' -f1 $1) | cut -d' ' -f1`
-if [ $COMMIT_MESSAGE_FIRST_WORD = $BRANCH_NAME ]; then
+if [ ${COMMIT_MESSAGE_FIRST_WORD,,} = ${BRANCH_NAME,,} ]; then
     exit 0
 fi
 
