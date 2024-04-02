@@ -1,26 +1,32 @@
 [core]
     editor = "vim +startinsert"
-    hooksPath = ~/.git_hooks
+    #hooksPath = ~/.git_hooks
 [alias]
-    ss = "status"
-    sh = "stash"
-    shp = "stash pop"
-    shs = "stash save"
-    a = "add"
-    aa = "add -A"
-    b = "branch"
-    c = "commit"
-    cm = "commit -m"
-    ca = "commit --amend"
-    can = "commit --amend --no-edit"
-    co = "checkout"
-    m = !"git merge $1"
-    mnf = !"git merge $1 --no-ff"
-    cr = !"git push -u ${1:-origin} HEAD:`git config branch.$(git name-rev --name-only HEAD).merge | sed -e 's@refs/heads/@refs/for/@'`"
-    fa = "fetch --all"
-    l = "log --oneline"
-    ll = "log -1 HEAD --stat"
-    ps = "push"
-    pl = "pull"
+    s = status
+    sh = stash
+    shp = stash pop
+    shl = stash list
+    shs = stash save
+    shd = stash drop
+    a = add
+    aa = add -A
+    b = branch
+    c = commit
+    cm = commit -m
+    ca = commit --amend
+    can = commit --amend --no-edit
+    co = checkout
+    m = !git merge $1
+    mnf = !git merge $1 --no-ff
+    cr = !git push -u ${1:-origin} HEAD:`git config branch.$(git name-rev --name-only HEAD).merge | sed -e 's@refs/heads/@refs/for/@'`
+    fa = fetch --all
+    l = log --oneline
+    ll = log -1 HEAD --stat
+    ps = push
+    pl = pull
 [color]
     ui = true
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
